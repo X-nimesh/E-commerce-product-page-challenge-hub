@@ -18,22 +18,31 @@ $grey:rgb(255, 226, 204);
 @mixin flex1($dir,$align) {
     display: flex;
     flex-direction: $dir;
-    justify-content: center;
+    justify-content: space-between;
     align-items: $align;
 }
 
 @import "header";
-
+.supermain{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 .main{
     // width: 70vw;
     @include flex(row);
     // background: rgb(255, 0, 0);
-    
+    overflow: hidden;
     .centerMain{
         @include flex(row);
-        margin-top: 80px;
+        margin-top: 35px;
         // background: red;
         width: 72vw;
+        
        
     }
     .mainP{
@@ -57,7 +66,7 @@ $grey:rgb(255, 226, 204);
     }
     .dec{
         @include flex1(column,flex-start);
-        margin-left: 10vw;
+        margin-left: 5vw;
         // background: red;
         // height: 80vh;
         
@@ -71,11 +80,12 @@ $grey:rgb(255, 226, 204);
         }
         .pName{
             margin-top: 20px;
-            font-size: 45px;
+            font-size: 4vw;
             font-weight: 700;
         }
         .description{
             color: $grey;
+            font-size: 1vw;
             margin-top: 40px;
         }
         .priceDetail{
