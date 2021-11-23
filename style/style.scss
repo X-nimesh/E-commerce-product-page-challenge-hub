@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700;800;900&display=swap');
+*{
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+
+
+$color:rgb(236, 148, 71);
+$grey:rgb(255, 226, 204);
+@mixin flex($dir) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex1($dir,$align) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: center;
+    align-items: $align;
+}
+
+@import "header";
+
+.main{
+    // width: 70vw;
+    @include flex(row);
+    // background: rgb(255, 0, 0);
+    
+    .centerMain{
+        @include flex(row);
+        margin-top: 80px;
+        // background: red;
+        width: 72vw;
+       
+    }
+    .mainP{
+        width: 30vw;
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+    .smallPhotos{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        // align-items: center;
+        padding: 10px 10px;
+
+      img{
+         
+          width: 6vw;
+          cursor: pointer;
+          border-radius: 15px;
+      }
+    }
+    .dec{
+        @include flex1(column,flex-start);
+        margin-left: 10vw;
+        // background: red;
+        // height: 80vh;
+        
+        .companyName{
+            
+            font-size: 14px;
+            font-weight: 700;
+            // margin-top: -150px;
+            color: $color;
+        
+        }
+        .pName{
+            margin-top: 20px;
+            font-size: 45px;
+            font-weight: 700;
+        }
+        .description{
+            color: $grey;
+            margin-top: 40px;
+        }
+        .priceDetail{
+            display: flex;
+           
+            justify-content: center;
+           
+
+            margin-top: 40px;
+
+
+            .price{
+                .mainp{
+                    font-weight: 800;
+                    font-size: 27px;
+                }
+                .discountP{
+                    margin-top: 10px;
+                   color: rgb(189, 189, 189);
+                   text-decoration: line-through;
+                   font-weight: 600;
+                }
+               
+                
+                
+            }
+            .dis{
+                font-size: 15px;
+                margin-left: 25px;
+                color: rgb(236, 148, 71);
+                margin-top: 4px;
+                background: rgb(255, 226, 204);
+                padding: 3px 2px;
+                width: 40px;
+                height: 20px;
+                font-weight: 600;
+                text-align: center;
+                border-radius: 5px;
+            }
+
+        }
+        .cart{
+            @include flex(row);
+            
+            .num{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                background: #F7F8FD;
+                width: 120px;
+                height: 50px;
+                border-radius: 10px;
+                padding: 0px 15px;
+
+                img{
+                    cursor: pointer;
+                    
+            
+                }
+                p{
+                    font-weight: 600;
+                }
+            }
+
+            .cartButton{
+
+                @include flex(row);
+               width: 250px;
+               height: 50px;
+               border-radius: 10px;
+               margin-left: 20px;
+                background: #ff9f21;
+                color: white;
+                font-weight: 500;
+                font-size: 17px;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+
+                p{
+                    margin-left: 10px;
+                }
+                img{
+                    box-shadow: 0px 0px 40px 2px rgb(255, 190, 104);
+                }
+        }
+        .cartButton:hover{
+            box-shadow: 5px 15px 40px 2px rgb(255, 190, 104);
+        }
+        
+    }
+
+}
+
+
+}
+
